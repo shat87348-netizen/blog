@@ -35,6 +35,31 @@ jobs:
       - name: Build Jekyll site
         run: bundle exec jekyll build
 
+      - name: Create Cloudflare Pages project if not exists
+        run: |
+          PROJECT_NAME="zhangshuming-blog"
+          ACCOUNT_ID="${{ secrets.CLOUDFLARE_ACCOUNT_ID }}"
+          API_TOKEN="${{ secrets.CLOUDFLARE_API_TOKEN }}"
+          
+          # Check if project exists
+          RESPONSE=$(curl -s -X GET \
+            "https://api.cloudflare.com/client/v4/accounts/${ACCOUNT_ID}/pages/projects/${PROJECT_NAME}" \
+            -H "Authorization: Bearer ${API_TOKEN}" \
+            -H "Content-Type: application/json")
+          
+          # If project doesn't exist, create it
+          if echo "$RESPONSE" | grep -q '"success":false'; then
+            echo "Project not found, creating..."
+            curl -X POST \
+              "https://api.cloudflare.com/client/v4/accounts/${ACCOUNT_ID}/pages/projects" \
+              -H "Authorization: Bearer ${API_TOKEN}" \
+              -H "Content-Type: application/json" \
+              -d "{\"name\":\"${PROJECT_NAME}\",\"production_branch\":\"main\"}"
+            echo "Project created successfully"
+          else
+            echo "Project already exists"
+          fi
+
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/pages-action@v1
         with:
