@@ -7,15 +7,10 @@
   "installCommand": "gem install bundler && bundle install && npm install",
   "rootDirectory": ".",
   "startCommand": "npx serve _site -p $PORT",
-  "dockerfile": false,
   "rewrites": [
     {
       "source": "/post",
       "destination": "/post.html"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/$1"
     }
   ]
 }

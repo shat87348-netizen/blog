@@ -4,3 +4,7 @@
 # 明确指定这不是 Rails 项目
 # 没有 Rakefile，不需要运行 rake 命令
 
+# 忽略 Dockerfile（如果存在）
+Dockerfile
+Dockerfile.*
+*.dockerfile
