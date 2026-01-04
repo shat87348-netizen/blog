@@ -37,3 +37,47 @@
 - `_layouts/post.html` - 主要布局文件，包含分页逻辑
 - `posts-data.json` - 文章数据源
 - `css/style.scss` - 样式文件
+
+## 部署说明
+
+### Cloudflare Pages 部署
+
+项目使用 GitHub Actions 自动构建并部署到 Cloudflare Pages。
+
+#### 前置准备
+
+1. **获取 Cloudflare API Token**
+   - 登录 [Cloudflare Dashboard](https://dash.cloudflare.com/)
+   - 进入 **My Profile** > **API Tokens** > **Create Token**
+   - 使用 **Edit Cloudflare Workers** 模板或自定义权限（Account: Cloudflare Pages:Edit）
+
+2. **获取 Account ID**
+   - 在 Cloudflare Dashboard 右侧边栏可以看到 **Account ID**
+
+3. **配置 GitHub Secrets**
+   - 进入 GitHub 仓库 **Settings** > **Secrets and variables** > **Actions**
+   - 添加以下 secrets：
+     - `CLOUDFLARE_API_TOKEN`: Cloudflare API Token
+     - `CLOUDFLARE_ACCOUNT_ID`: Cloudflare Account ID
+
+#### 自动部署
+
+- 推送代码到 `main` 分支会自动触发构建和部署
+- 也可以在 GitHub Actions 中手动触发工作流
+
+详细部署指南请参考 [cloudflare-pages.md](./cloudflare-pages.md)
+
+### 本地开发
+
+```bash
+# 安装依赖
+gem install bundler
+bundle install
+npm install
+
+# 启动本地服务器
+bundle exec jekyll serve
+
+# 构建静态站点
+bundle exec jekyll build
+```
