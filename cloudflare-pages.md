@@ -27,13 +27,25 @@
 
 ## 首次部署
 
+### 重要：先创建 Cloudflare Pages 项目
+
+在首次部署前，需要先在 Cloudflare Pages 中创建项目：
+
+1. 登录 [Cloudflare Pages](https://dash.cloudflare.com/?to=/:account/pages)
+2. 点击 **Create a project**
+3. 选择 **Upload assets**（手动上传方式）
+4. 项目名称填写：`zhangshuming-blog`
+5. 点击 **Create project**（暂时不需要上传文件，项目创建后会被 GitHub Actions 自动部署）
+
 ### 方式一：使用 GitHub Actions（推荐）
 
-1. 推送代码到 `main` 分支
-2. GitHub Actions 会自动触发构建和部署
-3. 部署完成后，在 Cloudflare Pages 控制台可以看到部署状态
+1. 确保已在 Cloudflare Pages 中创建项目（见上方）
+2. 推送代码到 `main` 分支
+3. GitHub Actions 会自动触发构建和部署
+4. 如果项目不存在，工作流会自动创建（但建议先手动创建）
+5. 部署完成后，在 Cloudflare Pages 控制台可以看到部署状态
 
-### 方式二：在 Cloudflare Pages 中连接 GitHub
+### 方式二：在 Cloudflare Pages 中直接连接 GitHub
 
 1. 登录 [Cloudflare Pages](https://dash.cloudflare.com/?to=/:account/pages)
 2. 点击 **Create a project** > **Connect to Git**
@@ -44,6 +56,8 @@
    - **Build output directory**: `_site`
    - **Root directory**: `/` (留空)
 5. 点击 **Save and Deploy**
+
+注意：如果使用方式二，则不需要 GitHub Actions 工作流，Cloudflare 会自动构建和部署。
 
 ## 自动部署
 
