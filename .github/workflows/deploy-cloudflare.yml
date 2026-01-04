@@ -29,11 +29,8 @@ jobs:
           node-version: '18'
           cache: 'npm'
 
-      - name: Install dependencies
-        run: |
-          gem install bundler
-          bundle install
-          npm install
+      - name: Install Node dependencies
+        run: npm install
 
       - name: Build Jekyll site
         run: bundle exec jekyll build
