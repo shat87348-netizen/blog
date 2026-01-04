@@ -9,6 +9,10 @@
   "startCommand": "npx serve _site -p $PORT",
   "rewrites": [
     {
+      "source": "/post",
+      "destination": "/post.html"
+    },
+    {
       "source": "/(.*)",
       "destination": "/$1"
     }
