@@ -40,3 +40,6 @@ _posts/2025-08-11-gis.md
 *.code-workspace
 
 
+Dockerfile
+Dockerfile.*
+*.dockerfile
