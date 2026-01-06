@@ -29,8 +29,16 @@ jobs:
           node-version: '18'
           cache: 'npm'
 
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
       - name: Install Node dependencies
         run: npm install
+
+      - name: Update posts data
+        run: python3 update_posts_data.py
 
       - name: Build Jekyll site
         run: bundle exec jekyll build

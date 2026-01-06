@@ -1,6 +1,6 @@
 {
   "build": {
-    "command": "gem install bundler && bundle install && bundle exec jekyll build",
+    "command": "python3 update_posts_data.py && gem install bundler && bundle install && bundle exec jekyll build",
     "outputDirectory": "_site"
   },
   "framework": "static",

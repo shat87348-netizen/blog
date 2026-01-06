@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "zhangshuming技术博客",
   "scripts": {
-    "build": "gem install bundler && bundle install && bundle exec jekyll build",
+    "build": "python3 update_posts_data.py && gem install bundler && bundle install && bundle exec jekyll build",
     "start": "npx serve _site -p $PORT"
   },
   "engines": {
