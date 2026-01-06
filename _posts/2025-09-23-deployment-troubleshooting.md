@@ -1,13 +1,8 @@
 ---
 title: Next.js 项目部署到 Cloudflare Pages 问题排查指南
 date: 2025-09-23
-categories:
-  - 其他
-tags:
-  - Next.js
-  - Cloudflare Pages
-  - GitHub Actions
-  - 部署问题
+categories: [其他]
+tags: [Next.js, Cloudflare Pages, GitHub Actions, 部署问题]
 ---
 
 # Next.js 项目部署到 Cloudflare Pages 问题排查指南
