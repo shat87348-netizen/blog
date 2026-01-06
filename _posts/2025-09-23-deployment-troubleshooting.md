@@ -1,9 +1,8 @@
 ---
 title: Next.js 项目部署到 Cloudflare Pages 问题排查指南
-date: 2026-01-06
+date: 2025-09-23
 categories:
-  - 部署
-  - Cloudflare
+  - 其他
 tags:
   - Next.js
   - Cloudflare Pages

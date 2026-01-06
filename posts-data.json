@@ -1,6 +1,31 @@
 {
   "posts": [
     {
+      "title": "Next.js 项目部署到 Cloudflare Pages 问题排查指南",
+      "excerpt": "本文档记录了将 Next.js 15 项目部署到 Cloudflare Pages 过程中遇到的各种问题及其解决方案。 - 框架: Next.js 15.4.6 - React: 19.1.0 - 部署平台: Cloudflare Pages - CI/CD: GitHub Actions - 构建工具: @cloudflare/next-on-pages@1.13.16 --- - packag...",
+      "url": "//2025/09/23/deployment-troubleshooting.html",
+      "date": "2025-09-23",
+      "categories": [
+        ""
+      ],
+      "tags": [
+        ""
+      ]
+    },
+    {
+      "title": "nextjs 打包过程中遇到的问题",
+      "excerpt": "在使用 Next.js App Router 时，当组件中使用了 useSearchParams() hook 而没有正确包装在 Suspense 边界中时，会出现以下错误： 从 Next.js 15 开始，所有使用客户端 hooks（如 useSearchParams、useRouter 等）的组件都必须包装在 Suspense 边界中。这是因为： - 服务端渲染 (SSR): 这些 hooks...",
+      "url": "/前端/2025/08/11/gis.html",
+      "date": "2025-04-01",
+      "categories": [
+        "前端"
+      ],
+      "tags": [
+        "nextjs",
+        "错误处理"
+      ]
+    },
+    {
       "title": "nextjs 打包过程中遇到的问题",
       "excerpt": "在使用 Next.js App Router 时，当组件中使用了 useSearchParams() hook 而没有正确包装在 Suspense 边界中时，会出现以下错误： 从 Next.js 15 开始，所有使用客户端 hooks（如 useSearchParams、useRouter 等）的组件都必须包装在 Suspense 边界中。这是因为： - 服务端渲染 (SSR): 这些 hooks...",
       "url": "/前端/2025/04/01/nextjs-build-error1.html",
@@ -27,16 +52,15 @@
       ]
     },
     {
-      "title": "nextjs 打包过程中遇到的问题",
-      "excerpt": "在 Next.js 项目构建过程中，我们遇到了几个典型的错误类型： 1. Suspense 边界问题 2. TypeScript 类型错误 3. 文件权限问题 4. 端口占用问题 Next.js 15+ 要求所有使用客户端 hooks 的组件必须包装在 Suspense 边界中。 !错误截图1 useSearchParams() 可能返回 null，需要添加空值检查。 构建文件的所有权问题，通常是...",
-      "url": "/前端/2025/03/19/nextjs-build-errors-analysis.html",
-      "date": "2025-03-19",
+      "title": "币圈各种网站",
+      "excerpt": "1. 币圈各种网站 --- - gmgn.ai: https://gmgn.ai/?chain=sol&ref=uOUVbxFX - 币圈安全指南: https://docs.gmgn.ai/cn/an-quan-ti-shi",
+      "url": "/工具/2025/03/12/bi.html",
+      "date": "2025-03-12",
       "categories": [
-        "前端"
+        "工具"
       ],
       "tags": [
-        "nextjs",
-        "错误处理"
+        "站点"
       ]
     },
     {
@@ -330,6 +354,18 @@
       ]
     },
     {
+      "title": "常见问题",
+      "excerpt": "1. Windows问题 2. Ubuntu问题 3. CentOS问题 --- --- --- --- 1. 使用netstat或lsof查看端口占用 2. 确认占用进程的PID 3. 使用ps命令查看进程详细信息 4. 使用kill命令终止进程 5. 验证端口是否已释放 1. 检查包管理器缓存是否需要更新 2. 确认软件包名称是否正确 3. 检查是否有依赖冲突 4. 清理包管理器缓存 5. 使...",
+      "url": "/其他/2022/06/12/common.html",
+      "date": "2022-06-12",
+      "categories": [
+        "其他"
+      ],
+      "tags": [
+        "常见问题"
+      ]
+    },
+    {
       "title": "nginx常见问题",
       "excerpt": "1. Windows 2. Ubuntu 3. CentOS 4. 问题汇总 5. 配置 --- --- --- --- !nginx配置截图 nginx配置相关截图 --- nginx的配置文件采用模块化的结构，主要包含以下部分：",
       "url": "/前端/2022/06/12/nginx.html",
@@ -344,7 +380,7 @@
     },
     {
       "title": "收录各种好玩的网站",
-      "excerpt": "1. 3D类 --- - 东京3D地铁: https://minitokyo3d.com/",
+      "excerpt": "1. 3D类 2. 相机 3. AI 4. 视频 5. 图片 6. 前端工具 7. 实用工具 8. 学习资源 9. 技术网站 --- - 东京3D地铁: https://minitokyo3d.com/ - 全球各地相机: https://drivenlisten.com/city/# - AI图片素材库: https://chatimg.ai/zh/gallery?category=art - ...",
       "url": "/工具/2022/02/12/funny-site.html",
       "date": "2022-02-12",
       "categories": [
@@ -369,7 +405,7 @@
     },
     {
       "title": "工具集",
-      "excerpt": "1. AI工具 2. 图片工具 3. 数据库工具 4. 浏览器插件 --- - Pollo AI: https://pollo.ai/zh/pricing - 即梦AI: https://jimeng.jianying.com/ai-tool/generate?type=video - AI图片生成三维模型 https://poly.cam/ - 比特虫: https://www.bitbug.n...",
+      "excerpt": "1. AI工具 2. 图片工具 3. 数据库工具 4. 浏览器插件 5. 下载工具 6. git资源 7. 爬虫工具 --- - Pollo AI: https://pollo.ai/zh/pricing - Veo3： https://openart.ai/video/i2v/veo3?gad_source=1&gad_campaignid=22795382774&gbraid=0AAAAA-y...",
       "url": "/工具/2022/02/12/tools.html",
       "date": "2022-02-12",
       "categories": [
@@ -393,32 +429,6 @@
       ]
     },
     {
-      "title": "常见问题",
-      "excerpt": "1. Windows问题 2. Ubuntu问题 3. CentOS问题 --- --- --- --- 1. 使用netstat或lsof查看端口占用 2. 确认占用进程的PID 3. 使用ps命令查看进程详细信息 4. 使用kill命令终止进程 5. 验证端口是否已释放 1. 检查包管理器缓存是否需要更新 2. 确认软件包名称是否正确 3. 检查是否有依赖冲突 4. 清理包管理器缓存 5. 使...",
-      "url": "/其他/2022/06/12/common.html",
-      "date": "2022-01-03",
-      "categories": [
-        "其他"
-      ],
-      "tags": [
-        "常见问题"
-      ]
-    },
-    {
-      "title": "charles 破解",
-      "excerpt": "1. 第一步,下载charles 1. 第二部,生成key,这里使用的是java代码 1. 第三步,查看破解码 1. 第四步，破解 --- 下载charles",
-      "url": "/其他/2022/01/09/charlespojie.html",
-      "date": "2021-05-06",
-      "categories": [
-        "其他"
-      ],
-      "tags": [
-        "charles",
-        "抓包",
-        "破解"
-      ]
-    },
-    {
       "title": "Refused to execute script from 'http://localhost:3000/panoramicMap/bundle.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled.",
       "excerpt": "Refused to execute script from 'http://localhost:3000/panoramicMap/bundle.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. - webpack - react - types...",
       "url": "/前端/2022/01/09/q1.html",
@@ -428,6 +438,20 @@
       ],
       "tags": [
         "问题解决"
+      ]
+    },
+    {
+      "title": "charles 破解",
+      "excerpt": "1. 第一步,下载charles 1. 第二部,生成key,这里使用的是java代码 1. 第三步,查看破解码 1. 第四步，破解 --- 下载charles",
+      "url": "/其他/2022/01/09/charlespojie.html",
+      "date": "2021-01-09",
+      "categories": [
+        "其他"
+      ],
+      "tags": [
+        "charles",
+        "抓包",
+        "破解"
       ]
     }
   ]
